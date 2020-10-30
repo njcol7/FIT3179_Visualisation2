@@ -104,10 +104,7 @@
                         },
                         "size": {
                             "field": "nkill",
-                            "type":"quantitative",
-                            /*"scale": {
-                                "type" : "log"
-                            }*/
+                            "type":"quantitative"
                         },
                         "tooltip" : [{
                             "title" : "Country",
