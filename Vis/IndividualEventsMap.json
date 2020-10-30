@@ -1,4 +1,5 @@
-{ "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+{ 
+            "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
             "width": 1080,
             "height" : 720,
             "projection": {
@@ -131,4 +132,4 @@
                     }
                 }]
             }]
-        }
+}
