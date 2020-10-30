@@ -1,0 +1,28 @@
+            "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+            "data": {
+                "url" : "https://raw.githubusercontent.com/njcol7/FIT3179_Visualisation2/main/data/gt_europe.csv"
+            },
+            "transform" : [{
+                "filter" : {
+                    "not" : {
+                        "field" : "attacktype1_txt",
+                        "range": [0, 9]
+                    }
+                }
+            }],
+            "mark": "bar",
+            "encoding": {
+                "x": {
+                    "field": "country_txt",
+                    "type": "nominal",
+                    "sort": "-y"
+                },
+                "y": {
+                    "aggregate": "count",
+                    "field": "country"
+                },
+                "color": {
+                    "field": "attacktype1_txt"
+                }
+            }
+        }
