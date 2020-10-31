@@ -1,3 +1,4 @@
+{
             "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
             "data": {
                 "url" : "https://raw.githubusercontent.com/njcol7/FIT3179_Visualisation2/main/data/gt_europe.csv"
