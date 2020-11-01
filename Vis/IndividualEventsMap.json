@@ -137,5 +137,35 @@
                         }]
                     }
                 }]
-            }]
+            },
+        {
+            "data": {
+                "values": [
+                    {"Latitude": 44, "Longitude": -2, "annotation": "Basque Conflict"},
+                    {"Latitude": 55, "Longitude": -8, "annotation": "The Troubles"},
+                    {"Latitude": 48, "Longitude": 38, "annotation": "War in Donbass"},
+                    {"Latitude": 43, "Longitude": 43, "annotation": "Insurgency in the North Caucasus"}
+                ]
+            },
+            "mark": {
+                "type": "text",
+                "align":"right",
+                "baseline":"middle",
+                "dx":-12,
+                "fontSize":11.5,
+                "fontStyle":"italic"
+            },
+            "encoding":{
+                "latitude":{
+                    "field" : "Latitude"
+                },
+                "longitude":{
+                    "field" : "Longitude"
+                },
+                "text":{
+                    "field":"annotation",
+                    "type":"nominal"
+                }
+            }
+        }]
 }
