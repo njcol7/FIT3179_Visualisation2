@@ -3,6 +3,12 @@
             "data": {
                 "url" : "https://raw.githubusercontent.com/njcol7/FIT3179_Visualisation2/main/data/gt_europe.csv"
             },
+            "background": "#4b565e",
+            "config": {
+                "view": {
+                    "stroke": "transparent"
+                }
+             },
             "transform" : [{
                 "filter" : {
                     "not" : {
