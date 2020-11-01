@@ -68,6 +68,8 @@
                         "YearSelector":{
                             "type" : "single",
                             "fields": ["Year"],
+                            "name" : "Year",
+                            "value" : 2017,
                             "bind":{
                                 "Year" : {
                                     "input": "range",
