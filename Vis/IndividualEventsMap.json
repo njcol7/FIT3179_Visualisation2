@@ -115,7 +115,10 @@
                         },
                         "size": {
                             "field": "nkill",
-                            "type":"quantitative"
+                            "type":"quantitative",
+                                "legend" : {
+                                    "title": "Fatalities"
+                            }
                         },
                         "tooltip" : [{
                             "title" : "Country",
