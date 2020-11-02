@@ -1,6 +1,6 @@
 { 
             "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-            "width": 1000,
+            "width": 1100,
             "height" : 600,
             "projection": {
                 "type": "azimuthalEqualArea"
@@ -100,7 +100,9 @@
                             "field" : "attacktype1_txt",
                             "type" : "nominal",
                             "legend" : {
-                                "title": "Attack Type"
+                                "title": "Attack Type",
+                                "orient": "none",
+                                "legendX": 900
                             }
 
                         },
