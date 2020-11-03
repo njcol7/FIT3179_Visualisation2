@@ -68,7 +68,7 @@
                         "YearSelector":{
                             "type" : "single",
                             "fields": ["Year"],
-                            "name" : "Year",
+                            "title" : "Year",
                             "value" : 2017,
                             "bind":{
                                 "Year" : {
@@ -121,7 +121,9 @@
                                 "legend" : {
                                     "title": "Fatalities",
                                     "orient": "none",
-                                    "legendX": 900
+                                    "legendX": 900,
+                                    "labelColor": "white",
+                                    "titleColor": "white"
                             }
                         },
                         "tooltip" : [{
