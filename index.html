@@ -2,7 +2,7 @@
   <head>
       <meta charset="utf-8" />
     <title>
-      Global Terrorism
+      European Terrorism
     </title>
 
     <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
@@ -15,16 +15,138 @@
         margin-right: 5px;
       }
       </style>
+
+      <style>
+        h1{
+            text-align: center;
+            color: white;
+        }
+
+        h2{
+            text-align: center;
+            color: white;
+        }
+
+        h4{
+            text-align: center;
+            color: white;
+        }
+
+        h6{
+            text-align: center;
+            color: white;
+        }
+
+        body {
+              background-color: lightgray;
+              color: black;
+        }
+
+        .page {
+           width: 1200px;
+           background-color: #4b565e;
+           margin: auto;
+           padding: 50px;
+           padding-top: 35px;
+        }
+        .flexContainer{
+            display: flex;
+        }
+
+        .fix{
+            width: 950px;
+        }
+        .flex{
+            flex-grow: 1;
+            font-size: 12;
+            color: white;
+        }
+        .fix_description{
+            width: 600;
+            font-size: 12;
+            color: white;
+            text-align: center;
+        }
+        .sources{
+            font-size: 8;
+            color: white;
+        }
+        .sub_titles{
+            color: white;
+            font-size: 18;
+            text-align: center;
+        }
+
+      </style>
   </head>
 
   <body>
-      <h1>Global Terrorism</h1>
+      <div class="page">
 
-      <div id="vis"> </div>
-      <div id="vis2"> </div>
+          <h1>History of Terrorism in Europe</h1>
+          <h4>From 1970 - 2017</h4>
 
-      <script>
-      
-      </script>
+          <h2>Fatalities due to Terrorism by Country</h2>
+          <h6>Select a Country to Filter Plots</h6>
+
+          <div id="attacksPerCountry"> </div>
+
+          <h2>Fatalities for Individual Attacks</h2>
+
+          <div class = "flexContainer">
+              <div id="individualMap", class="fix"> </div>
+              <div id="description", class="flex">
+
+                  <ul>
+                    <div class="sub_titles">Basque Conflict</div>
+                    <li>1959 - 2011</li>
+                    <li>Seperatist organisation Euskadi Ta Askatasuna (ETA) carried out attacks agains Spain, from whom they sought independence. </li>
+                    <br>
+                    <div class="sub_titles">The Troubles</div>
+                    <li>1960s–1998 </li>
+                    <li>Conflict between unionists, who wanted to remain in the United Kingdom and nationalists, seeking to unite Ireland </li>
+                    <br>
+                    <div class="sub_titles">War in Donbass</div>
+                    <li>2014-Present </li>
+                    <li>Conflict between the ukrainian government and Russian-backed seperatists</li>
+                    <br>
+                    <div class="sub_titles">Chechen Wars and Insurgency in the North Caucasus</div>
+                    <li>1994-2017</li>
+                    <li>Attacks carried out against Russia by Chechen seperatists, Caucasus Emirate and ISIL in an attempt to establish an independent state in the North Caucus</li>
+                  </ul>
+
+              </div>
+          </div>
+
+          <h2>Fatalities by Country and Attack Type</h2>
+
+          <div id="BarChart" > </div>
+
+          <div id="sources", class="sources">
+              Sources
+              <ul>
+                  <li> National Consortium for the Study of Terrorism and Responses to Terrorism (START), University of Maryland. (2018). The Global Terrorism Database (GTD) [Data file]. Retrieved from https://www.start.umd.edu/gtd </li>
+                  <li>Made with Natural Earth. Free vector and raster map data @ naturalearthdata.com.</li>
+                  <li> mapshaper https://mapshaper.org/ </li>
+                  <li> Insurgency in the North Caucasus, Wikipedia, https://en.wikipedia.org/wiki/Insurgency_in_the_North_Caucasus</li>
+                  <li> War in Donbass, Wikipedia, https://en.wikipedia.org/wiki/War_in_Donbass#Separatist_insurgents</li>
+            </ul>
+          </div>
+
+      </div>
+
+    <script>
+
+        var attacksPerCountry = "https://raw.githubusercontent.com/njcol7/FIT3179_Visualisation2/main/Vis/ChoroplethMap.json";
+
+        var individualMap = "https://raw.githubusercontent.com/njcol7/FIT3179_Visualisation2/main/Vis/IndividualEventsMap.json";
+
+        var BarChart = "https://raw.githubusercontent.com/njcol7/FIT3179_Visualisation2/main/Vis/BarChart.json";
+
+        //vegaEmbed('#test', test, {"actions": false});
+        vegaEmbed('#individualMap', individualMap, {"actions": false});
+        vegaEmbed('#attacksPerCountry', attacksPerCountry, {"actions": false});
+        vegaEmbed('#BarChart', BarChart, {"actions": false});
+    </script>
   </body>
 </html>
