@@ -3,7 +3,7 @@
             "data": {
                 "url" : "https://raw.githubusercontent.com/njcol7/FIT3179_Visualisation2/main/data/gt_europe.csv"
             },
-            "width": 1000,
+            "width": 900,
             "height" : 300,
             "background": "#4b565e",
             "config": {
@@ -24,17 +24,24 @@
                 "x": {
                     "field": "country_txt",
                     "type": "nominal",
+                    "title": "Country"
                     "sort": "-y"
                 },
                 "y": {
                     "aggregate": "count",
                     "field": "country",
+                    "title": "Number of Attacks Recorded",
                     "axis": {
                           "grid": false
                      }
                 },
                 "color": {
-                    "field": "attacktype1_txt"
+                    "field": "attacktype1_txt",
+                        "legend" : {
+                                    "title": "Attack Type",
+                                     "orient": "none",
+                                    "legendX": 800
+                        }
                 }
             }
         }
