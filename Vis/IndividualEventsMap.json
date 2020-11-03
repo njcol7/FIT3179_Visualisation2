@@ -178,7 +178,7 @@
                     "type":"nominal"
                 },
                 "color": {
-                        "value": "white"
+                        "value": "darkgray"
                         }
             }
         }]
