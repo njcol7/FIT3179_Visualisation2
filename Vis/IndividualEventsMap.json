@@ -175,7 +175,7 @@
                     "field":"annotation",
                     "type":"nominal"
                 },
-                "color"{
+                "color": {
                         "value": "white"
                         }
             }
