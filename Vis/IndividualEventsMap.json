@@ -37,7 +37,7 @@
                     "filter" : "datum.longitude != 0 & datum.latitude != 0"
                 },
                 {
-                    "filter" : "datum.longitude > -40 & datum.longitude < 50 & datum.latitude > 36 "
+                    "filter" : "datum.longitude > -35 & datum.longitude < 50 & datum.latitude > 36 "
                 },
                 {
                     "filter" : {
