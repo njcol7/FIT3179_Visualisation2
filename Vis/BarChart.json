@@ -24,7 +24,7 @@
                 "x": {
                     "field": "country_txt",
                     "type": "nominal",
-                    "title": "Country"
+                    "title": "Country",
                     "sort": "-y"
                 },
                 "y": {
