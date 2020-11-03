@@ -28,7 +28,10 @@
                 },
                 "y": {
                     "aggregate": "count",
-                    "field": "country"
+                    "field": "country",
+                    "axis": {
+                          "grid": false
+                     }
                 },
                 "color": {
                     "field": "attacktype1_txt"
