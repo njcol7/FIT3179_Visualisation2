@@ -25,7 +25,11 @@
                     "field": "country_txt",
                     "type": "nominal",
                     "title": "Country",
-                    "sort": "-y"
+                    "sort": "-y",
+                    "axis":{
+                         "labelColor": "#ffffff",
+                          "titleColor": "#ffffff"  
+                    }
                 },
                 "y": {
                     "aggregate": "count",
