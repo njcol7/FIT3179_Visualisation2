@@ -102,7 +102,9 @@
                             "legend" : {
                                 "title": "Attack Type",
                                 "orient": "none",
-                                "legendX": 700
+                                "legendX": 700,
+                                "labelColor": "white",
+                                "titleColor": "white"
                             }
 
                         },
@@ -172,7 +174,10 @@
                 "text":{
                     "field":"annotation",
                     "type":"nominal"
-                }
+                },
+                "color"{
+                        "value": "white"
+                        }
             }
         }]
 }
