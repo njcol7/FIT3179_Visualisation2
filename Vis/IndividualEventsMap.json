@@ -1,6 +1,6 @@
 { 
             "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-            "width": 800,
+            "width": 900,
             "height" : 600,
             "projection": {
                 "type": "azimuthalEqualArea"
@@ -117,7 +117,9 @@
                             "field": "nkill",
                             "type":"quantitative",
                                 "legend" : {
-                                    "title": "Fatalities"
+                                    "title": "Fatalities",
+                                    "orient": "none",
+                                    "legendX": 750
                             }
                         },
                         "tooltip" : [{
