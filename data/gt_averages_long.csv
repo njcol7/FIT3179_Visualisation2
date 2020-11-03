@@ -1,99 +1,99 @@
-country_txt,variable,value
-Albania,fatalities_pop,0.74
-Albania,events_pop_year,0.55
-Andorra,fatalities_pop,0
-Andorra,events_pop_year,0.72
-Austria,fatalities_pop,0.09
-Austria,events_pop_year,0.31
-Belarus,fatalities_pop,0.16
-Belarus,events_pop_year,0.03
-Belgium,fatalities_pop,0.22
-Belgium,events_pop_year,0.33
-Bosnia and Herz.,fatalities_pop,0.87
-Bosnia and Herz.,events_pop_year,0.89
-Bulgaria,fatalities_pop,0.17
-Bulgaria,events_pop_year,0.14
-Croatia,fatalities_pop,4.41
-Croatia,events_pop_year,0.27
-Cyprus,fatalities_pop,1.86
-Cyprus,events_pop_year,3.52
-Czech Republic,fatalities_pop,0.04
-Czech Republic,events_pop_year,0.07
-Czechoslovakia,fatalities_pop,NA
-Czechoslovakia,events_pop_year,NA
-Denmark,fatalities_pop,0.05
-Denmark,events_pop_year,0.17
-Estonia,fatalities_pop,0.27
-Estonia,events_pop_year,0.24
-Finland,fatalities_pop,0.23
-Finland,events_pop_year,0.08
-France,fatalities_pop,0.18
-France,events_pop_year,0.98
-Germany,fatalities_pop,0.04
-Germany,events_pop_year,0.35
-Greece,fatalities_pop,0.53
-Greece,events_pop_year,2.61
-Hungary,fatalities_pop,0.05
-Hungary,events_pop_year,0.1
-Iceland,fatalities_pop,0
-Iceland,events_pop_year,0.31
-Ireland,fatalities_pop,0.85
-Ireland,events_pop_year,1.63
-Italy,fatalities_pop,0.09
-Italy,events_pop_year,0.59
-Kosovo,fatalities_pop,2.44
-Kosovo,events_pop_year,2.41
-Latvia,fatalities_pop,0.09
-Latvia,events_pop_year,0.15
-Lithuania,fatalities_pop,0.06
-Lithuania,events_pop_year,0.05
-Luxembourg,fatalities_pop,0
-Luxembourg,events_pop_year,0.91
-Macedonia,fatalities_pop,1.41
-Macedonia,events_pop_year,1.23
-Malta,fatalities_pop,1.24
-Malta,events_pop_year,1.35
-Moldova,fatalities_pop,0.44
-Moldova,events_pop_year,0.15
-Montenegro,fatalities_pop,0.82
-Montenegro,events_pop_year,0.55
-Netherlands,fatalities_pop,0.05
-Netherlands,events_pop_year,0.19
-Norway,fatalities_pop,1.23
-Norway,events_pop_year,0.09
-Poland,fatalities_pop,0.02
-Poland,events_pop_year,0.02
-Portugal,fatalities_pop,0.13
-Portugal,events_pop_year,0.31
-Romania,fatalities_pop,0.03
-Romania,events_pop_year,0.01
-Russia,fatalities_pop,1.18
-Russia,events_pop_year,0.32
-Serbia,fatalities_pop,0.08
-Serbia,events_pop_year,0.04
-Slovak Republic,fatalities_pop,0.16
-Slovak Republic,events_pop_year,0.07
-Slovenia,fatalities_pop,0.13
-Slovenia,events_pop_year,0.06
-Soviet Union,fatalities_pop,NA
-Soviet Union,events_pop_year,NA
-Spain,fatalities_pop,0.66
-Spain,events_pop_year,1.8
-Sweden,fatalities_pop,0.09
-Sweden,events_pop_year,0.3
-Switzerland,fatalities_pop,0.35
-Switzerland,events_pop_year,0.36
-Ukraine,fatalities_pop,2.38
-Ukraine,events_pop_year,0.8
-United Kingdom,fatalities_pop,1.23
-United Kingdom,events_pop_year,1.92
-Vatican City,fatalities_pop,NA
-Vatican City,events_pop_year,NA
-Yugoslavia,fatalities_pop,NA
-Yugoslavia,events_pop_year,NA
-Liechtenstein,fatalities_pop,0
-Liechtenstein,events_pop_year,0
-Czechia,fatalities_pop,0.04
-Czechia,events_pop_year,0.07
-Slovakia,fatalities_pop,0.04
-Slovakia,events_pop_year,0.07
+country_txt,variable,value,value2
+Albania,fatalities_pop,0.74,0.55
+Albania,events_pop_year,0.55,0.74
+Andorra,fatalities_pop,0,0.72
+Andorra,events_pop_year,0.72,0
+Austria,fatalities_pop,0.09,0.31
+Austria,events_pop_year,0.31,0.09
+Belarus,fatalities_pop,0.16,0.03
+Belarus,events_pop_year,0.03,0.16
+Belgium,fatalities_pop,0.22,0.33
+Belgium,events_pop_year,0.33,0.22
+Bosnia and Herz.,fatalities_pop,0.87,0.89
+Bosnia and Herz.,events_pop_year,0.89,0.87
+Bulgaria,fatalities_pop,0.17,0.14
+Bulgaria,events_pop_year,0.14,0.17
+Croatia,fatalities_pop,4.41,0.27
+Croatia,events_pop_year,0.27,4.41
+Cyprus,fatalities_pop,1.86,3.52
+Cyprus,events_pop_year,3.52,1.86
+Czech Republic,fatalities_pop,0.04,0.07
+Czech Republic,events_pop_year,0.07,0.04
+Czechoslovakia,fatalities_pop,NA,NA
+Czechoslovakia,events_pop_year,NA,NA
+Denmark,fatalities_pop,0.05,0.17
+Denmark,events_pop_year,0.17,0.05
+Estonia,fatalities_pop,0.27,0.24
+Estonia,events_pop_year,0.24,0.27
+Finland,fatalities_pop,0.23,0.08
+Finland,events_pop_year,0.08,0.23
+France,fatalities_pop,0.18,0.98
+France,events_pop_year,0.98,0.18
+Germany,fatalities_pop,0.04,0.35
+Germany,events_pop_year,0.35,0.04
+Greece,fatalities_pop,0.53,2.61
+Greece,events_pop_year,2.61,0.53
+Hungary,fatalities_pop,0.05,0.1
+Hungary,events_pop_year,0.1,0.05
+Iceland,fatalities_pop,0,0.31
+Iceland,events_pop_year,0.31,0
+Ireland,fatalities_pop,0.85,1.63
+Ireland,events_pop_year,1.63,0.85
+Italy,fatalities_pop,0.09,0.59
+Italy,events_pop_year,0.59,0.09
+Kosovo,fatalities_pop,2.44,2.41
+Kosovo,events_pop_year,2.41,2.44
+Latvia,fatalities_pop,0.09,0.15
+Latvia,events_pop_year,0.15,0.09
+Lithuania,fatalities_pop,0.06,0.05
+Lithuania,events_pop_year,0.05,0.06
+Luxembourg,fatalities_pop,0,0.91
+Luxembourg,events_pop_year,0.91,0
+Macedonia,fatalities_pop,1.41,1.23
+Macedonia,events_pop_year,1.23,1.41
+Malta,fatalities_pop,1.24,1.35
+Malta,events_pop_year,1.35,1.24
+Moldova,fatalities_pop,0.44,0.15
+Moldova,events_pop_year,0.15,0.44
+Montenegro,fatalities_pop,0.82,0.55
+Montenegro,events_pop_year,0.55,0.82
+Netherlands,fatalities_pop,0.05,0.19
+Netherlands,events_pop_year,0.19,0.05
+Norway,fatalities_pop,1.23,0.09
+Norway,events_pop_year,0.09,1.23
+Poland,fatalities_pop,0.02,0.02
+Poland,events_pop_year,0.02,0.02
+Portugal,fatalities_pop,0.13,0.31
+Portugal,events_pop_year,0.31,0.13
+Romania,fatalities_pop,0.03,0.01
+Romania,events_pop_year,0.01,0.03
+Russia,fatalities_pop,1.18,0.32
+Russia,events_pop_year,0.32,1.18
+Serbia,fatalities_pop,0.08,0.04
+Serbia,events_pop_year,0.04,0.08
+Slovak Republic,fatalities_pop,0.16,0.07
+Slovak Republic,events_pop_year,0.07,0.16
+Slovenia,fatalities_pop,0.13,0.06
+Slovenia,events_pop_year,0.06,0.13
+Soviet Union,fatalities_pop,NA,NA
+Soviet Union,events_pop_year,NA,NA
+Spain,fatalities_pop,0.66,1.8
+Spain,events_pop_year,1.8,0.66
+Sweden,fatalities_pop,0.09,0.3
+Sweden,events_pop_year,0.3,0.09
+Switzerland,fatalities_pop,0.35,0.36
+Switzerland,events_pop_year,0.36,0.35
+Ukraine,fatalities_pop,2.38,0.8
+Ukraine,events_pop_year,0.8,2.38
+United Kingdom,fatalities_pop,1.23,1.92
+United Kingdom,events_pop_year,1.92,1.23
+Vatican City,fatalities_pop,NA,NA
+Vatican City,events_pop_year,NA,NA
+Yugoslavia,fatalities_pop,NA,NA
+Yugoslavia,events_pop_year,NA,NA
+Liechtenstein,fatalities_pop,0,0
+Liechtenstein,events_pop_year,0,0
+Czechia,fatalities_pop,0.04,0.07
+Czechia,events_pop_year,0.07,0.04
+Slovakia,fatalities_pop,0.04,0.07
+Slovakia,events_pop_year,0.07,0.04
