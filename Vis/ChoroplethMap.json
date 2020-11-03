@@ -1,0 +1,334 @@
+{
+        "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+        "background": "#4b565e",
+        "config": {
+            "view": {
+                "stroke": "transparent"
+            }
+        },
+        "vconcat": [{
+            "height": 600,
+            "width": 1100,
+                "layer": [{
+                    "projection": {
+                        "type": "azimuthalEqualArea"
+                    },
+                    "data": {
+                        "url": "https://raw.githubusercontent.com/njcol7/FIT3179_Visualisation2/main/data/ne_50m_europe.json",
+                        "format": {
+                            "type":"topojson",
+                            "feature":"ne_50m_admin_0_countries"
+                        }
+                    },
+                    "transform" : [{
+                        "lookup":"properties.NAME",
+                        "from":{
+                            "data":{
+                                "url":"https://raw.githubusercontent.com/njcol7/FIT3179_Visualisation2/main/data/gt_averages.csv"
+                            },
+                            "key":"country_txt",
+                            "fields":["fatalities_pop", "events_pop_year", "fatalities_pop_r", "events_pop_year_r"]
+                        }
+                    }],
+                    "mark": {
+                        "type":"geoshape"
+                    },
+                    "selection": {
+                        "countries": {
+                            "type": "multi",
+                            "encodings": ["color"]
+                        }
+                    },
+                    "encoding": {
+                        "color": {
+                            "field": "fatalities_pop",
+                            "type": "quantitative",
+                            "scale" : {
+                                "scheme" : "reds"
+                            },
+                            "legend" : {
+                                "title": "Deaths per year per 1 million people",
+                                "orient": "none",
+                                "legendX": 900,
+                                "labelColor": "white",
+                                "titleColor": "white"
+                            }
+                        },
+                        "tooltip":[{
+                            "field":"properties.NAME",
+                            "type":"nominal",
+                            "title":"Country"
+                        },
+                        {
+                            "title": "Attacks per year per 1 million people",
+                            "field":"events_pop_year_r",
+                            "type":"quantitative"
+                        },
+                        {
+                            "title": "Fatalities per year per 1 million people",
+                            "field":"fatalities_pop_r",
+                            "type":"quantitative"
+                        }]
+                    }
+                },
+                {
+            "data": {
+                "url" : "https://raw.githubusercontent.com/njcol7/FIT3179_Visualisation2/main/data/gt_europe.csv"
+            },
+            "transform" : [{
+                "filter": {"selection": "cities"}
+            },
+            {
+                "filter" : "datum.longitude > -40 & datum.longitude < 50 & datum.latitude > 36"
+            },
+            {
+                "filter" : {
+                    "not" : {
+                        "field" : "attacktype1_txt",
+                        "range": [0, 9]
+                    }
+                }
+            },
+            {
+                    "filter" : {
+                        "field" : "nkill",
+                        "range": [10, 10000]
+                    }
+            }],
+            "encoding":{
+                "longitude":{
+                    "field":"longitude",
+                    "type":"quantitative"
+                },
+                "latitude":{
+                    "field":"latitude",
+                    "type":"quantitative"
+                }
+            },
+            "layer" :[{
+                "mark":{
+                    "type" : "circle"
+                },
+                "encoding":{
+                    "color": {
+                        "value": "black"
+                    },
+                    "tooltip" : [{
+                        "title" : "Country",
+                        "field" : "country_txt"
+                    },
+                    {
+                        "title" : "City",
+                        "field" : "city"
+                    },
+                    {
+                        "title" : "Year",
+                        "field" : "iyear"
+                    },
+                    {
+                        "title" : "Type",
+                        "field" : "attacktype1_txt"
+                    },
+                    {
+                        "title" : "Fatalities",
+                        "field" : "nkill"
+                    }]
+                }
+            },
+            {
+                "mark": {
+                    "type": "text",
+                    "align":"right",
+                    "baseline":"middle",
+                    "dx":-12,
+                    "fontSize":11.5,
+                    "fontStyle":"italic"
+                },
+                "encoding":{
+                    "text":{
+                        "field":"city"
+                    }
+                }
+            }]
+        }]
+            },
+            {
+                "hconcat": [{
+                    "height" : 150,
+                    "width": 500,
+                    "title": {
+                        "text": "Attacks with 10 or More Fatalities",
+                        "color": "white"
+                    },
+                    "data": {
+                        "url" : "https://raw.githubusercontent.com/njcol7/FIT3179_Visualisation2/main/data/gt_europe.csv"
+                    },
+                    "transform" : [{
+                        "lookup":"country_txt",
+                        "from":{
+                            "data":{
+                                "url":"https://raw.githubusercontent.com/njcol7/FIT3179_Visualisation2/main/data/gt_averages.csv"
+                            },
+                            "key":"country_txt",
+                            "fields":["fatalities_pop", "events_pop_year"]
+                        }
+                    },
+                    {
+                        "filter" : {
+                            "not" : {
+                                "field" : "attacktype1_txt",
+                                "range": [0, 9]
+                            }
+                        }
+                    },
+                    {
+                      "filter": {"selection": "countries"}
+                    },
+                    {
+                         "filter" : {
+                             "field" : "nkill",
+                             "gt": 10
+                         }
+                    }],
+                    "mark": "bar",
+                    "selection": {
+                        "cities": {"type": "multi", "encodings": ["x"], "empty": "none"}
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "city",
+                            "type": "nominal",
+                            "sort": "-y",
+                            "title": "City",
+                            "axis": {
+                                "grid": false,
+                                "labelColor": "#ffffff",
+                                "titleColor": "#ffffff"
+                            }
+                        },
+                        "y": {
+                            "field": "nkill",
+                            "type": "quantitative",
+                            "aggregate": "sum",
+                            "title": "Fatalities",
+                            "axis": {
+                                "grid": false,
+                                "labelColor": "#ffffff",
+                                "titleColor": "#ffffff"
+                            }
+                        },
+                        "color": {
+                          "field": "fatalities_pop",
+                          "type": "quantitative",
+                          "scale" : {
+                             "scheme" : "reds"
+                          }
+                        },
+                        "stroke": {
+                          "value" : "#000000"
+                        },
+                        "strokeWidth":{
+                          "condition": {
+                              "selection": "cities",
+                              "value": 2
+                          },
+                          "value": 0
+                        },
+                        "tooltip":[{
+                            "title" : "Year",
+                           "field" : "iyear"
+                       },
+                      {
+                           "title": "Country",
+                           "field": "country_txt"
+                       },
+                       {
+                           "title": "City",
+                           "field": "city"
+                       },
+                       {
+                           "title" : "Fatalities",
+                           "field": "nkill",
+                           "aggregate": "sum"
+                        }]
+                    }
+                },
+                {
+                    "height": 200,
+                    "width" : 500,
+                    "title": {
+                        "text": "Fatalities per Year",
+                        "color": "white"
+                    },
+                    "data": {
+                         "url" : "https://raw.githubusercontent.com/njcol7/FIT3179_Visualisation2/main/data/gt_europe.csv"
+                     },
+                     "transform": [{
+                        "lookup":"country_txt",
+                        "from":{
+                            "data":{
+                                "url":"https://raw.githubusercontent.com/njcol7/FIT3179_Visualisation2/main/data/gt_averages.csv"
+                            },
+                            "key":"country_txt",
+                            "fields":["fatalities_pop", "events_pop_year"]
+                        }
+                    },
+                    {
+                        "filter": {
+                            "not" : {
+                                "field": "nkill",
+                                "equal": "NA"
+                            }
+                        }
+                    },
+                    {
+                        "calculate": "year(datum.iyear)",
+                        "as": "Year"
+                    },
+                    {
+                      "filter": {"selection": "countries"}
+                    }],
+                     "mark" : "bar",
+                     "encoding": {
+                       "x": {
+                           "field": "Year",
+                           "axis": {
+                               "grid": false,
+                               "labelColor": "#ffffff",
+                               "titleColor": "#ffffff"
+                           }
+                       },
+                       "y": {
+                           "aggregate": "sum",
+                           "field": "nkill",
+                           "title": "Fatalities",
+                           "axis": {
+                               "grid": false,
+                               "labelColor": "#ffffff",
+                               "titleColor": "#ffffff"
+                           }
+                       },
+                       "color" : {
+                           "field": "fatalities_pop",
+                           "type": "quantitative",
+                            "scale" : {
+                                "scheme" : "reds"
+                            }
+                       },
+                       "tooltip": [{
+                           "title" : "Year",
+                           "field" : "Year"
+                       },
+                       {
+                           "title": "Country",
+                           "field": "country_txt"
+                       },
+                       {
+                           "title" : "Fatalities",
+                           "field": "nkill",
+                           "aggregate": "sum"
+                       }]
+                   }
+               }]
+           }]
+       }
