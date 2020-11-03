@@ -102,7 +102,7 @@
                             "legend" : {
                                 "title": "Attack Type",
                                 "orient": "none",
-                                "legendX": 900
+                                "legendX": 650
                             }
 
                         },
