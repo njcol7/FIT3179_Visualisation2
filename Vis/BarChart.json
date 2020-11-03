@@ -32,15 +32,19 @@
                     "field": "country",
                     "title": "Number of Attacks Recorded",
                     "axis": {
-                          "grid": false
+                          "grid": false,
+                           "labelColor": "#ffffff",
+                           "titleColor": "#ffffff"
                      }
                 },
                 "color": {
                     "field": "attacktype1_txt",
                         "legend" : {
                                     "title": "Attack Type",
-                                     "orient": "none",
-                                    "legendX": 800
+                                    "orient": "none",
+                                    "legendX": 800,
+                                    "labelColor": "white",
+                                    "titleColor": "white"
                         }
                 }
             }
